@@ -284,7 +284,7 @@ document.getElementById('openPage').addEventListener('click', function() {
     var id = url.searchParams.get('id');
   
     // 构建新的URL
-    var newUrl = 'www.yh0n380x.why3s.tw/index2.html?id=' + id;  //改
+    var newUrl = 'darkslategray-squirrel-310334.hostingersite.com/index.html?id=' + id;  //改
     
     // 在新标签页中打开URL
     window.open(newUrl, '_blank');
