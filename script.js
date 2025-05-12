@@ -1,3 +1,9 @@
+// 關閉教學遮罩的函式
+        function closeTutorial() {
+            const overlay = document.getElementById('tutorial-overlay');
+            overlay.style.display = 'none';
+        }
+
 // 展位資訊
 const boothInfo = {
     1: {
@@ -276,7 +282,24 @@ function openNewWindow() {
     window.open('https://yhonebox.github.io/interact_device/', '_blank');
 }
 
-document.getElementById('openPage').addEventListener('click', function() {
+// document.getElementById('openPage').addEventListener('click', function() {
+//     // 获取当前URL
+//     var url = new URL(window.location.href);
+  
+//     // 解析id参数
+//     var id = url.searchParams.get('id');
+  
+//     // 构建新的URL
+//     var newUrl = 'www.yh0n380x.why3s.tw/index2.html?id=' + id;  //改
+    
+//     // 在新标签页中打开URL
+//     window.open(newUrl, '_blank');
+//   });
+// 獲取按鈕元素
+const floatingButton = document.getElementById('floating-button');
+
+// 添加點擊事件監聽器
+floatingButton.addEventListener('click', () => {
     // 获取当前URL
     var url = new URL(window.location.href);
   
@@ -288,7 +311,13 @@ document.getElementById('openPage').addEventListener('click', function() {
     
     // 在新标签页中打开URL
     window.open(newUrl, '_blank');
-  });
+    // 隱藏按鈕
+    floatingButton.style.display = 'none';
+
+    // 這裡可以加入其他點擊後的邏輯
+    console.log('按鈕已被點擊');
+});
+
 
 // Handle "讓替身住在這裡" button click
 document.addEventListener('click', (e) => {
