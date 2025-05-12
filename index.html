@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>互動裝置展示</title>
+    <title>國立臺中教育大學 數位內容科技學系</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 教學遮罩 -->
+    <div id="tutorial-overlay">
+        <h3>歡迎來到</h3>
+        <h4 style="text-align: center">國立臺中教育大學數位內容科技學系114級畢業專題展覽</h4>
+        <p>在這個網站您將可以按右下角的<img src="星球/替身.png" alt="範例圖片" style="width:24px; height:24px; vertical-align:middle; margin:0 5px;">圖示操作您製作的替身居住到喜歡的星球，</p>
+        <p>您也可以點擊右上方的漢堡條<img src="星球/menu_button.png" alt="範例圖片" style="width:24px; height:24px; vertical-align:middle; margin:0 5px;">打開選單，點擊<img src="星球/星座.png" alt="範例圖片" style="width:24px; height:24px; vertical-align:middle; margin:0 5px;">圖示，將開啟新分頁前往製作星座的遊戲，掃描每個展位的QR code以製作你的專屬星座！</p>
+        <button onclick="closeTutorial()">出發探險！</button>
+    </div>
+
     <div id="opening-animation">
         <img src="星球/logo.png" alt="Logo" />
     </div>
@@ -28,12 +37,12 @@
             </ul>
 
             <div class="menu-extra-buttons" style="display:flex; gap:10px; margin-top:20px; justify-content:center;">
-                <a id="openPage" class="menu-extra-button">
+                <!-- <a id="openPage" class="menu-extra-button">
                     <img src="星球/替身.png" alt="icon" style="width:24px; height:24px; margin-right:8px;">
                     操作替身
-                </a>
+                </a> -->
                 <a onclick="openNewWindow()" class="menu-extra-button">
-                    <img src="星球/星座.png" alt="icon" style="width:24px; height:24px; margin-right:8px;" >
+                    <img src="星球/星座.png" alt="icon" style="width:30px; height:30px; margin-right:8px;" >
                     製作專屬星座
                 </a>
             </div>
@@ -42,6 +51,11 @@
                 <img src="星球/logo.png" alt="Logo" style="max-width:220px; max-height:200px; object-fit:contain;">
             </div>
         </div>
+
+        <a id="floating-button" class="menu-extra-button">
+            <img src="星球/替身.png" alt="icon" style="width:50px; height:50px; ">
+    
+        </a>
 
         <!-- 區域1：左半展區 -->
         <div id="area1" class="area active">
