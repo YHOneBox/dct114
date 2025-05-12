@@ -1,3 +1,27 @@
+/* 固定在右下角的按鈕樣式 */
+#floating-button {
+    position: fixed;
+    bottom: 20px; /* 距離畫面底部 20px */
+    right: 20px; /* 距離畫面右側 20px */
+    background: none; /* 移除背景 */
+    border: none; /* 移除邊框 */
+    padding: 0; /* 移除內邊距 */
+    cursor: pointer; /* 鼠標樣式 */
+    z-index: 1000; /* 確保按鈕位於最上層 */
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+}
+
+#floating-button img {
+    width: 50px; /* 設定圖片寬度 */
+    height: 50px; /* 設定圖片高度 */
+    object-fit: contain; /* 確保圖片比例不變 */
+}
+
+#floating-button:hover {
+    transform: scale(1.1); /* 滑鼠懸停時放大效果 */
+}
 /* 基本樣式重置 */
 * {
     margin: 0;
@@ -670,4 +694,47 @@ body::before {
 
 .floating-cloud.hide {
   opacity: 0 !important;
+}
+
+/* 教學遮罩樣式 */
+#tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#tutorial-overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#tutorial-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 80%;
+}
+
+#tutorial-overlay button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #9b9fa4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tutorial-overlay button:hover {
+    background-color: #777c81;
 }
